@@ -15,7 +15,22 @@ const StyledHeader = styled.header`
 
 const StyledNav = styled.nav`
     height: 100%;
-    width: 100%
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+`;
+
+const Logo = styled.h1`
+    @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+    font-weight: 600;
+    font-size: 32px;
+    letter-spacing: 2px;
+    color: #fff;
+    font-family: 'Karla', sans-serif;
+    user-select: None
 `;
 
 export default function Header(){
@@ -23,7 +38,9 @@ export default function Header(){
     return (
         <StyledHeader>
             <StyledNav>
-                <HedaerNavButton/>
+                <HedaerNavButton height='70%' width='150px' text='Главная' link='/'/>
+                <Logo>Waifu2All</Logo>
+                <HedaerNavButton height='70%' width='150px' text='Профиль' link='signin'/>
             </StyledNav>
         </StyledHeader>
     )
